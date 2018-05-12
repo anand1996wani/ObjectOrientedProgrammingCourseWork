@@ -1,0 +1,26 @@
+#include <iostream>
+#include <fstream>
+#include "Complex.h"
+#include <vector>
+using namespace std;
+int main(){
+  fstream input_file;
+  input_file.open("ComplexList.txt");
+  vector<Complex> vec;
+  char a;
+  float b,c;
+  while (input_file >> a >> b >> c){
+    Complex obj(a,b,c);
+    vec.push_back(obj);
+  }
+  vector<Complex>::iterator v = vec.begin();
+  Complex obj;
+  cout<<" Rectangular \t\t Polar "<<endl;
+  while(v!=vec.end()){
+    obj = *v;
+    //cout<<obj.r_c<<"\t"<<obj.num_1<<"\t"<<obj.num_2<< endl;
+    obj.print();
+    v++;
+  }
+  return 0;
+}

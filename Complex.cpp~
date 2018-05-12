@@ -1,0 +1,37 @@
+#include "Complex.h"
+#include <iostream>
+using namespace std;
+Complex :: Complex()
+{
+    r_c = 'r';//r for  real
+    num_1 = 0;
+    num_2 = 0;
+}
+Complex :: Complex(char r)
+{
+    r_c = r;
+    if(r_c == 'r'){
+      num_1 = 0;
+      num_2 = 0;
+    }
+    else{
+      num_1 = 0;
+      num_2 = 1;
+    }
+}
+Complex :: Complex(char r,float a,float b){
+  r_c = r;
+  num_1 = a;
+  num_2 = b;
+}
+void Complex :: print(){
+  if(r_c=='p'){
+    cout<<num_1<<"\t"<<num_2<<"\t\t"<<num_1*sin(num_2)<<" + j"<<num_1*cos(num_2)<<endl;
+  }
+  else{
+    cout<<sqrt(pow(num_1,2) + pow(num_2,2))<<"\t"<<atan(num_2/num_1)<<"\t\t"<<num_1<<" + j"<<num_2<<endl;
+  }
+}
+Complex Complex :: operator + (Complex b){
+  
+}

@@ -1,0 +1,12 @@
+#include <math.h>
+class Complex{
+  char r_c;
+  float num_1;
+  float num_2;
+public:
+  Complex();
+  Complex(char r);
+  Complex(char r,float a,float b);
+  void print();
+  Complex operator + (Complex b);
+};
